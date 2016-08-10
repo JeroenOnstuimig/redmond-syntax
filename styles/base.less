@@ -8,7 +8,13 @@ atom-text-editor, :host {
     border-top: 2px solid @super-light-gray;
     border-bottom: 2px solid @super-light-gray;
     margin-top: -2px;
-    margin-bottom: -2px;
+	margin-bottom: -2px;
+  }
+
+  /* Onstuimig HACK */
+  .cursor-line + .cursor-line{
+	  border-top: none;
+	  margin-top: 0;
   }
 
   .wrap-guide {
@@ -34,7 +40,7 @@ atom-text-editor, :host {
         border-top: none;
         border-bottom: none;
         margin-top: 0px;
-        margin-bottom: 0px;
+		margin-bottom: 0px;
         margin-left: 0px;
       }
 
@@ -135,6 +141,10 @@ atom-text-editor .search-results .marker.current-result .region,
   &.type.variable {
     color: @blue;
   }
+  //Onstuimig Hack
+  &.type.var {
+    color: @blue;
+  }
   &.type.function {
     color: @blue;
   }
@@ -165,6 +175,14 @@ atom-text-editor .search-results .marker.current-result .region,
   &.other.symbol {
     color: @green;
   }
+
+  //Onstuimig Hack
+  &.numeric{
+    color: #09885f;
+  }
+  &.language{
+	  color: @blue;
+  }
 }
 
 .variable {
@@ -174,6 +192,14 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.parameter.function {
     color: @syntax-text-color;
+  }
+
+  //Onstuimig Hack
+  &.parameter{
+	  color: #0451a5;
+  }
+  &.other {
+	  color: #001188;
   }
 }
 
@@ -190,6 +216,11 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.other.link {
     color: @red;
+  }
+
+  //Onstuimig Hack
+  &.html{
+	  color: @red;
   }
 
   & > .source.js.embedded {
@@ -212,7 +243,11 @@ span .gfm {
       font-weight: bold;
     }
 
-    &.variable,
+	&.variable {
+		color: #001188; //Onstuimig Hack
+	}
+
+    //&.variable,
     &.parameters,
     &.array {
       color: @syntax-text-color;
@@ -232,6 +267,10 @@ span .gfm {
       color: @purple;
       font-style: italic;
     }
+
+	&.tag {
+	  color: @rusty-red;
+  	}
   }
 
   &.section.embedded {
@@ -250,6 +289,9 @@ span .gfm {
     color: @black;
   }
 
+  &.tag.ee{
+	  font-weight: bold;
+  }
 }
 
 .support {
@@ -259,6 +301,14 @@ span .gfm {
 
   &.property-name {
     color: @red;
+  }
+
+  // Onstuimig Hack
+  &.function.construct {
+	  color: @blue;
+  }
+  &.property-value {
+	  color: #0451a5;
   }
 }
 
@@ -285,7 +335,8 @@ span .gfm {
   }
 
   &.other.attribute-name {
-    color: @rusty-red;
+	//color: @rusty-red;
+    color: @blue; //Onstuimig Hack
 
     &.id {
       color: @blue;
@@ -405,4 +456,11 @@ span .gfm {
 atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
   padding-left: 1px;
+}
+
+//Onstuimig Hack
+.region.bracket-matcher {
+    position: absolute;
+    border: 1px solid #b9b9b9;
+    background-color: #e6f0e6;
 }
