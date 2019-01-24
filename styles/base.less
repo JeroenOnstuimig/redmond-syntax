@@ -69,12 +69,12 @@ atom-text-editor {
   }
 }
 
-atom-text-editor .search-results .syntax--marker .region{
+atom-text-editor .search-results .syntax--marker .region {
   background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .syntax--marker.current-result .region{
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
@@ -228,7 +228,8 @@ atom-text-editor .search-results .syntax--marker.current-result .region{
 }
 
 span .syntax--gfm {
-  &.syntax--variable.syntax--mention, &.syntax--username.syntax--string, &.syntax--issue.syntax--tag, &.syntax--issue.syntax--number {
+  &.syntax--variable.syntax--mention, &.syntax--username.syntax--string,
+  &.syntax--issue.syntax--tag, &.syntax--issue.syntax--number {
     font-weight: bold;
     color: @rusty-red;
   }
@@ -447,7 +448,8 @@ span .syntax--gfm {
 
 }
 
-atom-text-editor[mini] .scroll-view{
+atom-text-editor[mini] .scroll-view,
+atom-text-editor .scroll-view {
   padding-left: 1px;
 }
 
